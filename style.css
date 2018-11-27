@@ -1,0 +1,54 @@
+root {
+    padding: 20px;
+    margin: 20px;
+    
+}
+
+.navbar-brand {
+    float: left;
+  
+}
+
+.flex-container {
+    display: flex;
+   
+    font-weight: 100;
+   
+}
+.grid-container {
+    display: grid;   
+    grid-gap: 20px;
+    grid-template-columns: 20%  70%;
+}
+
+.left {
+    
+    border: black 1px solid;
+    height: 900px;
+    padding: 1em;
+}
+ul {
+    padding-bottom: 1em;
+}
+.right {
+    
+    height: 900px;
+    border: black 1px solid;
+    padding: 1em;
+}
+#others {
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.drop {
+    padding: 1em;
+    margin: 0 auto;    
+    height: 400px;
+    width: auto;;
+    border: 1px dotted black;
+}
+
