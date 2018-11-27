@@ -1,12 +1,15 @@
-root {
-    padding: 20px;
-    margin: 20px;
+:root {
     
+    overflow-y: hidden;
+}
+body {
+    height: 100%;
+    width: 100%;
 }
 
 .brand {
     float: left;
-    font-size: 3em;
+    font-size: 3rem;
     color: white;
   
 }
@@ -20,23 +23,34 @@ root {
 .grid-container {
     display: grid;   
     grid-gap: 20px;
-    grid-template-columns: 20%  70%;
+    grid-template-columns: 25%  70%;
+  
 }
-
+.btn{
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    /* margin-right: 16px; */
+    margin: 7px;
+}
 .left {
     
     border: black 1px solid;
-    height: 900px;
+    height: calc(100% - 40%);
     padding: 1em;
+    overflow-x:scroll;
+    overflow-y:scroll;
 }
 ul {
     padding-bottom: 1em;
 }
 .right {
     
-    height: 900px;
+    height: calc(100% - 40%);
     border: black 1px solid;
     padding: 1em;
+    overflow-x:scroll;
+    overflow-y:scroll;
 }
 #others {
     padding: 20px;
