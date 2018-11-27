@@ -4,8 +4,10 @@ root {
     
 }
 
-.navbar-brand {
+.brand {
     float: left;
+    font-size: 3em;
+    color: white;
   
 }
 
