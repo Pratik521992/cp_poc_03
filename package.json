@@ -1,0 +1,24 @@
+{
+  "name": "plainjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "plain.js",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "http://pratik521992.guthub.io/CPrules",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pratik521992/CP_POC2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pratik521992/CP_POC2/issues"
+  }
+ 
+}
