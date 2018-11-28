@@ -19,9 +19,9 @@
             <td class="left-block">
                 <h2>RULE TRIGGERS</h2>
                 <ul>
-                    <li>In Session Event</li>
-                    <li>Offline Event</li>
-                    <li>User Historical Ev.</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="in_seesion_event" type="rule_trigger" sub-type="event" default-value="">In Session Event</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="offline_event" type="rule_trigger" sub-type="event" default-value="">Offline Event</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="" type="rule_trigger" sub-type="event" default-value="">User Historical Ev.</li>
                 </ul>
                 <h2>CRITERIA</h2>
                 <ul>
@@ -37,7 +37,7 @@
                 </ul>
             </td>
             <td class="right-block" style="height: 100%;">
-                <div id="canvas">
+                <div id="canvas" ondrop="dropItem(event)" ondragover="allowDroponCanvas(event)">
 
                 </div>
             </td>

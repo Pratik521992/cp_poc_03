@@ -1,20 +1,29 @@
-$(document).ready(function(){
-   
-    // $("a").addClass( 'btn btn-success' );
-    
-    // $("a").hover(function(){
-        
-    //     $(this).css("background-color", "green");
-    //     }, function(){
-    //     $(this).css("background-color", "#00b33c");
-        
-    // });
 
+function allowDroponCanvas(ev) {
+    ev.preventDefault();
+}
 
+function allowDroponElement(ev) {
+    ev.preventDefault();
+}
 
+function dragItem(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
 
-});
+function dragElement(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
 
+function dropItem(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+
+    var el = document.createElement('div');
+    el.className = 'element';
+
+    ev.target.appendChild(el);
+}
 
 /*****************************************************
  * var template = {

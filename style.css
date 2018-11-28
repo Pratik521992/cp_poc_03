@@ -19,4 +19,7 @@ td.left-block li:hover {
 
 button.genscript { background:#00B597; color: #fff; border: none; padding: 15px; font-size: 15px; font-weight: bold }
 
-div#canvas { background: #efefef; height: calc( 100% - 40px ); margin: 20px; overflow-y: auto; box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.39);}
+div#canvas { background: #efefef; height: calc( 100% - 40px ); margin: 20px; overflow-y: auto; box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.39); padding: 20px;}
+
+
+div.element { border: solid 1px #999; border-radius: 4px; min-height: 50px; margin: 10px 0; padding: 10px; }
