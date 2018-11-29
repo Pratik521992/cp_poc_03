@@ -105,9 +105,11 @@ function dropItem(ev) {
 
     }
     if (dragObj.classList.contains('element')) {
+        // DRAG DROP EXISTING ELMENT ON CANVAS
         ev.target.appendChild(document.getElementById(data));
     }
     else if (dragingElement != 'conditions') {
+        // CREATES A NEW ELEMNT
         var el = document.createElement('div');
         el.className = 'element';
         el.setAttribute('id', uniqueId());
