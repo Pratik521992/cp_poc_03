@@ -40,6 +40,7 @@ function dropItem(ev) {
      }
     else if (dragingElement != 'conditions') {
         allElements(ev);
+     
     }
 
     
@@ -53,3 +54,20 @@ var uniqueId = function () {
     return 'id-' + Math.random().toString(36).substr(2, 16);
 };
 
+function doCopy(id){
+    var obj = document.getElementById(id);
+    obj.select();
+    document.execCommand('copy');
+}
+
+function doClose(id){
+    document.getElementById(id).style.display = 'none';
+}
+
+function doShow(id){
+    document.getElementById(id).style.display = 'block';
+}
+
+function genscript(){
+    doShow('overlay');
+}
