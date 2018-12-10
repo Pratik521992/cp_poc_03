@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CP Rules: Script Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+</head>
+<body>
+ 
+    <table id="main" cellpadding="0" cellspacing="0" border="0">
+        <tr class="header">
+            <td style="width: 250px; padding-left:1em;"><h1>CP <em style="font-family:'Times New Roman', Times, serif;">Rules</em></h1></td>
+            <td style="width: calc( 100% - 350px ); text-align:right;padding-right: 1em;"><button class="genscript" onclick="genscript()">Generate Script</button></td>
+        </tr>
+        <tr>
+            <td class="left-block">
+                <h2>RULE TRIGGERS</h2>
+                <ul>
+                    <li ondragstart="dragItem(event)" draggable="true" id="for_event" type="rule_trigger" sub-type="event" default-value="">For Event</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="in_seesion_event" type="rule_trigger" sub-type="event" default-value="">In Session Event</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="offline_event" type="rule_trigger" sub-type="event" default-value="">Offline Event</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="user_historical_event" type="rule_trigger" sub-type="event" default-value="">User Historical Ev.</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="no_event" type="rule_trigger" sub-type="event" default-value="">No Event</li>
+                </ul>
+                <h2>CRITERIA</h2>
+                <ul>
+                    <li ondragstart="dragItem(event)" draggable="true" id="operator" type="rule_criteria" sub-type="event" default-value="">Operator</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="any_of" type="rule_criteria" sub-type="event" default-value="">Any of</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="all_of" type="rule_criteria" sub-type="event" default-value="">All of</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="conditions" type="rule_criteria" sub-type="event" default-value="">Conditions</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="match_concepts" type="rule_criteria" sub-type="event" default-value="">Match Cocepts</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="match_specialities" type="rule_criteria" sub-type="event" default-value="">Match Specialities</li>
+                
+                </ul>
+                <h2>ACTION</h2>
+                <ul>
+                    <li ondragstart="dragItem(event)" draggable="true" id="tactic" type="rule_action" sub-type="event" default-value="">Tactic</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="tactic_content" type="rule_action" sub-type="event" default-value="">Tactic content</li>
+                    
+                </ul>
+                <h2>OTHERS</h2>
+                <ul>
+                    <li ondragstart="dragItem(event)" draggable="true" id="when" type="rule_others" sub-type="event" default-value="">When</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="if" type="rule_others" sub-type="event" default-value="">If</li>
+                    <li ondragstart="dragItem(event)" draggable="true" id="else" type="rule_others" sub-type="event" default-value="">Else</li>
+                    
+                </ul>
+            </td>
+            <td class="right-block" style="height: 100%;">
+                <div id="canvas" ondrop="dropItem(event)" ondragover="allowDroponCanvas(event)">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+   
+
+<div id="overlay">
+    <pre>
+        <textarea id="output" readonly></textarea>
+        
+    </pre>
+    <div style="width:60%; margin:auto; text-align:right; padding: 5px 20px; box-sizing:border-box;"><button onclick="doCopy('output')">Copy</button> <button onclick="doCloseOutput('overlay')">Close</button></div>
+</div>
+<script src="plain.js"></script>
+<script type="text/javascript" src="./Dependencies/conditions.js"></script>
+<script type="text/javascript" src="./Dependencies/alldragElemets.js"></script>
+<script type="text/javascript" src="./Dependencies/ForEvent.js"></script>
+<script type="text/javascript" src="./Dependencies/Dropdown.js"></script>
+</body>
+</html>
