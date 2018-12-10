@@ -4,7 +4,10 @@
   "description": "",
   "main": "plain.js",
   "dependencies": {
-    "gh-pages": "^2.0.1"
+    "express": "^4.16.4",
+    "file-system": "^2.2.2",
+    "gh-pages": "^2.0.1",
+    "jsdom": "^13.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -20,5 +23,4 @@
   "bugs": {
     "url": "https://github.com/Pratik521992/CP_POC2/issues"
   }
- 
 }
